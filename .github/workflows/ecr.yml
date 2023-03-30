@@ -5,13 +5,13 @@ on:
     branches: [ "main" ]
 
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: us-east-1
   ECR_REPOSITORY: express_app        
-  ECS_SERVICE: ecs_svc            
-  ECS_CLUSTER: ecs-cluster                
+  ECS_SERVICE: myapp-service            
+  ECS_CLUSTER: myapp-cluster              
   ECS_TASK_DEFINITION: templates/ecs_app.json 
                                                
-  CONTAINER_NAME: _ecs_app          
+  CONTAINER_NAME: ecs_app          
 
 permissions:
   contents: read
@@ -29,7 +29,7 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
 
