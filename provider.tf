@@ -2,25 +2,9 @@
 # provider.tf
 
 # Specify the provider and access details
-#provider "aws" {
-#  region = var.aws_region
-#}
-
-terraform {
-  cloud {
-    organization = "rohitpawar27"
-    workspaces {
-      name = "demo-ecs"
-    }
-  }
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
-
 provider "aws" {
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
   region = var.aws_region
-  # profile = var.aws_profile
 }
+
