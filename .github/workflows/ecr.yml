@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: express_app        
+  ECR_REPOSITORY: demo_ecs_app     
   ECS_SERVICE: myapp-service            
   ECS_CLUSTER: myapp-cluster              
   ECS_TASK_DEFINITION: templates/ecs_app.json 
