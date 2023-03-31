@@ -10,11 +10,6 @@ env:
   ECS_SERVICE: myapp-service            
   ECS_CLUSTER: myapp-cluster              
   ECS_TASK_DEFINITION: templates/ecs_app.json 
-
-env:  
-  TF_VAR_aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
-  TF_VAR_aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-                                               
   CONTAINER_NAME: ecs_app          
 
 permissions:
