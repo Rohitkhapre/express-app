@@ -15,6 +15,11 @@ variable "az_count" {
   default     = "2"
 }
 
+variable "aws_ecr_repository" {
+  description = "ECR repo name"
+  default     = "demo_ecs_app"
+}
+
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
   default     = "624796904417.dkr.ecr.us-east-1.amazonaws.com/express-app:latest"
