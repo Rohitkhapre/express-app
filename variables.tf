@@ -20,6 +20,11 @@ variable "aws_ecr_repository" {
   default     = "demo_ecs_app"
 }
 
+variable "environment" {
+  description = "Add the environment name"
+  default     = "demo"
+}
+
 variable "app_image" {
   description = "Docker image to run in the ECS cluster"
   default     = "624796904417.dkr.ecr.us-east-1.amazonaws.com/express-app:latest"
