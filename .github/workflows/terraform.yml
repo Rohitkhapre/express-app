@@ -39,6 +39,9 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
+    - name: Destroy infrastructure
+      run: terraform destroy -auto-approve
+
     # Make the format correct if wrong 
     - name: Terraform Format correct
       run: terraform fmt  
